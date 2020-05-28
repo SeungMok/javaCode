@@ -29,6 +29,7 @@ public class DiceGame2 {
 			}
 			total_count++;
 		}
+		
 		System.out.println("맞춘횟수 : "+count+"\t" + ((double)count/total_count)*100 +"%("+count+"/"+total_count+")");
 	}
 	
