@@ -8,6 +8,7 @@ public class MainStringArray {
 		int arr[][] = new int[10][3]; // 국 영 수
 		int menuNum;
 		boolean run = true;
+		String check;
 
 		int sum_korean = 0;
 		int sum_english = 0;
@@ -28,7 +29,7 @@ public class MainStringArray {
 
 			switch (menuNum) {
 			case 1:
-				for (int i = 0; i < arr.length; i++) {
+				for (int i = 0; i < arr.length; ) {
 					System.out.print("학생" + (i + 1) + "의 국어 성적 : ");
 					arr[i][0] = sc.nextInt();
 					sum_korean += arr[i][0];
@@ -40,8 +41,13 @@ public class MainStringArray {
 					System.out.print("학생" + (i + 1) + "의 수학 성적 : ");
 					arr[i][2] = sc.nextInt();
 					sum_math += arr[i][2];
-					System.out.println(
-							"학생" + (i + 1) + "의 국,영,수 성적 : (" + arr[i][0] + "," + arr[i][1] + "," + arr[i][2] + ")");
+					
+					System.out.println("학생" + (i + 1) + "의 국,영,수 성적 : (" + arr[i][0] + "," + arr[i][1] + "," + arr[i][2] + ")");
+					System.out.println("이 성적이 맞습니까 ? y/n");
+					check = sc.nextLine();
+					check = sc.nextLine();
+					if(check.equals("Y") || check.equals("y"))
+						i++;					
 				}
 				break;
 			case 2:
